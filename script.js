@@ -37,3 +37,22 @@ function saveIt(){
   renderSchedule();
 }
 
+//format the rows colors depending on time
+function setUpRows(){
+  timeRow.each(function(){
+  var thisRow = $(this);
+  var thisRowHr = parseInt(thisRow.attr("data-hour"));
+
+  // style rows to show where we are in the day
+  if (thisRowHr == currentHour) {
+    thisRow.addClass("present").removeClass("past future");
+  }
+  if (thisRowHr < currentHour) {
+    thisRow.addClass("past").removeClass("present future");
+  }
+  if (thisRowHr > currentHour) {
+    thisRow.addClass("future").removeClass("past present");
+  }
+});
+}
+
