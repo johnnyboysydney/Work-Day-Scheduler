@@ -56,3 +56,33 @@ function setUpRows(){
 });
 }
 
+function renderSchedule(){
+  
+  toDoItems = localStorage.getItem("todos");
+  toDoItems = JSON.parse(toDoItems);
+    
+  for (var i = 0; i < toDoItems.length; i++){
+    var itemHour = toDoItems[i].hour;
+    var itemText = toDoItems[i].text; 
+   
+    $("[data-hour=" + itemHour + "]").children("textarea").val(itemText);
+  }
+}
+$(document).ready(function(){
+  setUpRows();
+
+if(!localStorage.getItem("todos")){
+  //initialize the array of objects
+  startSchedule();
+} //otherwise dont bother bc we get it from local storage
+
+//display current date
+currentDay.text(currentDate);
+
+//render schedule from local storage
+renderSchedule();
+//when a todo item save button is clicked, save it
+scheduleArea.on("click", "button", saveIt);
+
+});
+
