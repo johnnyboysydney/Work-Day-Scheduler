@@ -26,6 +26,9 @@ Tests were conducted using Firefox, Chrome and Edge and there were no issues.
 
 ## Examples
 
+![image](https://user-images.githubusercontent.com/54227198/77220136-51801580-6b91-11ea-9a6f-6aa9c2ba66fe.png)
+![image](https://user-images.githubusercontent.com/54227198/77220140-56dd6000-6b91-11ea-83c9-b39150a7074c.png)
+![image](https://user-images.githubusercontent.com/54227198/77220141-5ba21400-6b91-11ea-94f5-4766e91783ba.png)
 
 
 ### Licence
